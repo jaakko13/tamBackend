@@ -16,6 +16,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 PW = os.getenv('SQL_PW')
+USER = os.getenv('SQL_USER')
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,7 +86,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'mssql',
         'NAME': 'tamhattanDB',
-        'USER': 'jankalite',
+        'USER': USER,
         'PASSWORD': PW,
         'HOST': 'tamdb.database.windows.net',
         'PORT': '',
