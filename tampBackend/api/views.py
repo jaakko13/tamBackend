@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics
+#generics above
 from .models import Posts
 from .serializers import PostSerializer
 from .models import Replies
