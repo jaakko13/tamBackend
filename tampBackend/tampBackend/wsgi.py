@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-settigns_module = 'tampBackend.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'tampBackend.settings'
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', settigns_module)
+settings_module = 'tampBackend.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'tampBackend.settings'
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 application = get_wsgi_application()
