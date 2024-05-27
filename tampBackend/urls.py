@@ -21,6 +21,6 @@ from django.contrib import admin
 
 #maybe empty path? api/?
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include("api.urls")),
+    path('admin/', admin.site.urls),
 ]
