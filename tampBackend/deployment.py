@@ -15,6 +15,13 @@ DEBUG = False
 # CSRF_TRUSTED_ORIGINS = ['https://'+os.environ['WEBSITE_HOSTNAME']]
 # DEBUG = False
 
+
+# from dotenv import load_dotenv
+
+# load_dotenv()
+# PW = os.getenv('SQL_PW')
+# USER = os.getenv('SQL_USER')
+
 # SECRET_KEY = os.environ['SECRET_KEY']
 
 # MIDDLEWARE = [
