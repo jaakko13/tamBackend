@@ -1,3 +1,4 @@
+from .settings import *
 """
 Django settings for quickstartproject project.
 
@@ -29,9 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'vgSStgFnsKoi90ovpXiepo5WNqLyHmdY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tamapi.azurewebsites.net']
 
 
 # Application definition
@@ -85,20 +86,16 @@ WSGI_APPLICATION = 'tampBackend.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'mssql',
-    #     'NAME': 'tamhattanDB',
-    #     'USER': USER,
-    #     'PASSWORD': PW,
-    #     'HOST': 'tamdb.database.windows.net',
-    #     'PORT': '',
-    #     'OPTIONS': {
-    #         'driver': 'ODBC Driver 18 for SQL Server',
-    #     },
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'tamhattanDB',
+        'USER': USER,
+        'PASSWORD': PW,
+        'HOST': 'tamdb.database.windows.net',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server',
+        },
     }
 }
 
