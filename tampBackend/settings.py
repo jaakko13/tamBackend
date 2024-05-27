@@ -12,11 +12,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
-from dotenv import load_dotenv
-
-load_dotenv()
-PW = os.getenv('SQL_PW')
-USER = os.getenv('SQL_USER')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'vgSStgFnsKoi90ovpXiepo5WNqLyHmdY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -60,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'tampBackend.urls'
+ROOT_URLCONF = 'tampbackend.urls'
 
 TEMPLATES = [
     {
@@ -78,13 +73,17 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tampBackend.wsgi.application'
+WSGI_APPLICATION = 'tampbackend.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
     # 'default': {
     #     'ENGINE': 'mssql',
     #     'NAME': 'tamhattanDB',
@@ -96,10 +95,6 @@ DATABASES = {
     #         'driver': 'ODBC Driver 18 for SQL Server',
     #     },
     # }
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
 }
 
 
