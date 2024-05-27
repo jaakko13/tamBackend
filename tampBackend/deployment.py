@@ -32,7 +32,7 @@ SECRET_KEY = 'vgSStgFnsKoi90ovpXiepo5WNqLyHmdY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tamapi.azurewebsites.net']
 
 
 # Application definition
