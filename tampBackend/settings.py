@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -84,16 +85,20 @@ WSGI_APPLICATION = 'tampBackend.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'mssql',
+    #     'NAME': 'tamhattanDB',
+    #     'USER': USER,
+    #     'PASSWORD': PW,
+    #     'HOST': 'tamdb.database.windows.net',
+    #     'PORT': '',
+    #     'OPTIONS': {
+    #         'driver': 'ODBC Driver 18 for SQL Server',
+    #     },
+    # }
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'tamhattanDB',
-        'USER': USER,
-        'PASSWORD': PW,
-        'HOST': 'tamdb.database.windows.net',
-        'PORT': '',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 18 for SQL Server',
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
