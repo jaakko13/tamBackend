@@ -24,16 +24,6 @@ CORS_ALLOWED_ORIGINS = [
     'https://tamhattan.azurewebsites.net' 
 ]
 
-
-STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
-    },
-}
-
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
